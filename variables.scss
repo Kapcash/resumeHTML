@@ -1,0 +1,28 @@
+$font-stack: 'Roboto', sans-serif;
+$font-size: 16px;
+
+$main-padding: 10px;
+$main-margin: 0.5rem;
+
+$primary-color: #dc254e;
+$second-color: #bbf5ce;
+$background-color: #09071d;
+$lightest-color: white;
+$darkest-color: black;
+
+$link-color: #7fa7f1;
+
+$text-primary-color: black;
+$text-second-color: lighten(black, 20%);
+$text-opposite-color: white;
+
+
+.red {
+  color: $primary-color;
+  border-color: $primary-color;
+}
+
+.grey {
+  color: $text-opposite-color;
+  border-color: $text-opposite-color;
+}
