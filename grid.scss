@@ -19,6 +19,10 @@ body {
   display: flex;
   flex-direction: row;
 }
+span.row {
+  justify-content: start;
+  align-items: baseline;
+}
 
 main {
   grid-column-start: 1;
