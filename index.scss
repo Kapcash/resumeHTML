@@ -6,10 +6,13 @@
   box-sizing: border-box;
 }
 
+$a4-width: 21cm;
+$a4-height: 29.7cm;
+
 @media print {
   body {
-    width: 21cm;
-    height: 29.7cm;
+    width: $a4-width;
+    height: $a4-height;
     margin: 0;
   }
 }
@@ -22,8 +25,8 @@ html {
 
 body {
   background-color: $lightest-color;
-  width: 21cm;
-  height: 29.7cm;
+  width: $a4-width;
+  height: $a4-height;
   margin: 0;
   overflow: scroll;
 
@@ -31,18 +34,18 @@ body {
 }
 
 p {
-  margin: 0.5em 0;
+  margin: $main-margin 0;
 }
-
 ul {
   padding: 0;
   list-style: none;
-}
-li {
-  margin: 0.5em 0;
+  li {
+    margin: $main-margin 0;
+  }
 }
 a {
-  text-decoration-color: #7fa7f1;
+  text-decoration: none;
+  text-decoration-color: $link-color;
   color: inherit;
   margin: 0;
   padding: 0;
@@ -50,53 +53,43 @@ a {
   &[target="_blank"]:not(.no-icon):after {
     content: "";
     display: inline-block;
-    width: 16px;
-    height: 16px;
+    width: 1rem;
+    height: 1rem;
     color: grey;
     vertical-align: middle;
     background-image: url(imgs/external_link.svg);
     background-size: 12px 12px;
     background-repeat: no-repeat;
     background-position: center;
-    margin: 0 5px;
+    margin: 0 $main-margin;
   }
 }
-/* Header */
 
+/* Header */
 header {
-  width: 100%;
-  padding: 0 20px;
+  padding: 0 $main-padding;
   background-color: #09071d;
-  grid-column-start: span 2;
   justify-content: space-between;
   &.line {
     margin: 5px 0;
   }
-  * {
+  h1 {
     color: $text-opposite-color;
+  }
+  * {
+    color: $text-opposite-second-color;
   }
 }
 #my-face {
-  height: 200px;
+  height: 100%;
   width: auto;
-  transform: translateY(20px);
+  transform: translateY(28px);
+  filter: drop-shadow(0px 0px 1px black);
 }
 
-.text-icon {
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  > span, > a {
-    margin: 0 5px;
-    line-height: 24px;
-    word-break: normal;
-  }
-  &.big {
-    font-size: large;
-    > img {
-      margin-right: 10px;
-    }
+main {
+  section:not(:first-of-type) h2 {
+    margin-top: $main-margin * 2;
   }
 }
 
@@ -115,9 +108,9 @@ header {
 
 #technos {
   background-color: $second-color;
-  padding: 0 15px;
-  padding-top: 25px;
-  /* margin-right: -5px; */
+  padding-top: $main-padding;
+  padding-left: $main-padding;
+  margin-right: -$main-padding;
   border-radius: 0 0 0 10px;
 }
 #technos > * {
@@ -133,5 +126,17 @@ header {
   font-weight: bold;
   > span {
     font-weight: lighter;
+  }
+}
+
+#links {
+  a {
+    margin: $main-margin / 2 2px;
+    .fab, .fas {
+      float: left;
+      color: $background-color;
+      font-size: $font-size * 2;
+      margin: 0 $main-margin / 2;
+    }
   }
 }

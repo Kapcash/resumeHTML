@@ -3,24 +3,13 @@
   border-color: #dc254e;
 }
 
-.grey {
-  color: white;
-  border-color: white;
-}
-
 .red {
   color: #dc254e;
   border-color: #dc254e;
 }
 
-.grey {
-  color: white;
-  border-color: white;
-}
-
 h1, h2, h3, h4, h5 {
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
+  margin: 0.5rem 0;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a {
   text-decoration: none;
@@ -29,17 +18,20 @@ h1.underline, h2.underline, h3.underline, h4.underline, h5.underline {
   border-bottom: 1px solid;
 }
 
-h1, h2 {
+h1 {
+  text-transform: uppercase;
   font-weight: bold;
+}
+
+h1, h2, h3 {
   color: black;
   border-color: black;
+  font-weight: bold;
 }
 
 h3 {
-  font-weight: bold;
-  color: black;
   margin-bottom: 0;
-  margin-right: 5px;
+  margin-right: 0.5rem;
 }
 h3 span {
   font-weight: normal;
@@ -60,15 +52,10 @@ section > h2 {
   border-color: #dc254e;
 }
 
-.grey {
-  color: white;
-  border-color: white;
-}
-
 body {
   display: grid;
   grid-template-columns: auto 30%;
-  grid-template-rows: 16% auto;
+  grid-template-rows: 13% auto;
 }
 
 .line {
@@ -91,6 +78,12 @@ span.row {
   align-items: baseline;
 }
 
+header {
+  width: 100%;
+  height: 100%;
+  grid-column-start: span 2;
+}
+
 main {
   grid-column-start: 1;
   grid-column-end: 1;
@@ -101,16 +94,45 @@ main {
 aside {
   grid-column-start: 2;
   grid-row-start: 2;
+  padding-right: 20px;
 }
 aside section {
   margin-bottom: 20px;
 }
-aside > :not(#technos) {
-  padding-right: 20px;
+aside .full-width {
+  margin-right: -20px;
 }
 
 section p {
-  margin-left: 10px;
+  margin-left: 0.5rem;
+}
+
+.text-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin-right: 20px;
+}
+.text-icon > span, .text-icon > a {
+  margin: 0 5px;
+  line-height: 24px;
+  word-break: normal;
+}
+.text-icon i {
+  text-align: center;
+}
+.text-icon.medium {
+  font-size: medium;
+}
+.text-icon.medium > img {
+  margin-right: 20px;
+}
+.text-icon.big {
+  font-size: large;
+}
+.text-icon.big > img {
+  margin-right: 20px;
 }
 
 * {
@@ -140,20 +162,20 @@ body {
 }
 
 p {
-  margin: 0.5em 0;
+  margin: 0.5rem 0;
 }
 
 ul {
   padding: 0;
   list-style: none;
 }
-
-li {
-  margin: 0.5em 0;
+ul li {
+  margin: 0.5rem 0;
 }
 
 a {
-  text-decoration-color: #7fa7f1;
+  text-decoration: none;
+  text-decoration-color: #5980a9;
   color: inherit;
   margin: 0;
   padding: 0;
@@ -161,54 +183,42 @@ a {
 a[target=_blank]:not(.no-icon):after {
   content: "";
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   color: grey;
   vertical-align: middle;
   background-image: url(imgs/external_link.svg);
   background-size: 12px 12px;
   background-repeat: no-repeat;
   background-position: center;
-  margin: 0 5px;
+  margin: 0 0.5rem;
 }
 
 /* Header */
 header {
-  width: 100%;
   padding: 0 20px;
   background-color: #09071d;
-  grid-column-start: span 2;
   justify-content: space-between;
 }
 header.line {
   margin: 5px 0;
 }
-header * {
+header h1 {
   color: white;
+}
+header * {
+  color: #cccccc;
 }
 
 #my-face {
-  height: 200px;
+  height: 100%;
   width: auto;
-  transform: translateY(20px);
+  transform: translateY(28px);
+  filter: drop-shadow(0px 0px 1px black);
 }
 
-.text-icon {
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-}
-.text-icon > span, .text-icon > a {
-  margin: 0 5px;
-  line-height: 24px;
-  word-break: normal;
-}
-.text-icon.big {
-  font-size: large;
-}
-.text-icon.big > img {
-  margin-right: 10px;
+main section:not(:first-of-type) h2 {
+  margin-top: 1rem;
 }
 
 /* Main */
@@ -224,9 +234,9 @@ header * {
 /* Technos */
 #technos {
   background-color: #bbf5ce;
-  padding: 0 15px;
-  padding-top: 25px;
-  /* margin-right: -5px; */
+  padding-top: 20px;
+  padding-left: 20px;
+  margin-right: -20px;
   border-radius: 0 0 0 10px;
 }
 
@@ -244,6 +254,16 @@ header * {
 }
 #languages li > span {
   font-weight: lighter;
+}
+
+#links a {
+  margin: 0.25rem 2px;
+}
+#links a .fab, #links a .fas {
+  float: left;
+  color: #141421;
+  font-size: 32px;
+  margin: 0 0.25rem;
 }
 
 /*# sourceMappingURL=test.css.map */
