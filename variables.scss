@@ -12,13 +12,24 @@ $darkest-color: black;
 
 $link-color: #5980a9;
 
+$text-contrast: 40%;
+
 $text-primary-color: black;
-$text-second-color: lighten($text-primary-color, 20%);
+$text-second-color: lighten($text-primary-color, $text-contrast);
 $text-opposite-color: white;
-$text-opposite-second-color: darken($text-opposite-color, 20%);
+$text-opposite-second-color: darken($text-opposite-color, $text-contrast / 2);
 
 
 .red {
   color: $primary-color;
   border-color: $primary-color;
+}
+
+.grey {
+  color: $text-second-color;
+  border-color: $text-second-color;
+}
+
+.lighter {
+  font-weight: lighter;
 }

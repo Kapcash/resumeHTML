@@ -3,9 +3,27 @@
   border-color: #dc254e;
 }
 
+.grey {
+  color: #666666;
+  border-color: #666666;
+}
+
+.lighter {
+  font-weight: lighter;
+}
+
 .red {
   color: #dc254e;
   border-color: #dc254e;
+}
+
+.grey {
+  color: #666666;
+  border-color: #666666;
+}
+
+.lighter {
+  font-weight: lighter;
 }
 
 h1, h2, h3, h4, h5 {
@@ -50,6 +68,15 @@ section > h2 {
 .red {
   color: #dc254e;
   border-color: #dc254e;
+}
+
+.grey {
+  color: #666666;
+  border-color: #666666;
+}
+
+.lighter {
+  font-weight: lighter;
 }
 
 body {
@@ -105,6 +132,7 @@ aside .full-width {
 
 section p {
   margin-left: 0.5rem;
+  text-align: justify;
 }
 
 .text-icon {
@@ -112,7 +140,9 @@ section p {
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  margin-right: 20px;
+}
+.text-icon + .text-icon {
+  margin-left: 20px;
 }
 .text-icon > span, .text-icon > a {
   margin: 0 5px;
@@ -206,8 +236,9 @@ header.line {
 header h1 {
   color: white;
 }
-header * {
+header > div > * {
   color: #cccccc;
+  letter-spacing: 1px;
 }
 
 #my-face {
@@ -219,16 +250,6 @@ header * {
 
 main section:not(:first-of-type) h2 {
   margin-top: 1rem;
-}
-
-/* Main */
-.period {
-  color: grey;
-  font-weight: lighter;
-}
-
-.tools {
-  color: grey;
 }
 
 /* Technos */

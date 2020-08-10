@@ -53,6 +53,7 @@ aside {
 // Left increment for inner content
 section p {
   margin-left: $main-margin;
+  text-align: justify;
 }
 
 
@@ -61,7 +62,9 @@ section p {
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  margin-right: $main-padding;
+  + .text-icon {
+    margin-left: $main-padding;
+  }
   > span, > a {
     margin: 0 5px;
     line-height: 24px;

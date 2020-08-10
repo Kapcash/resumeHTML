@@ -76,8 +76,9 @@ header {
   h1 {
     color: $text-opposite-color;
   }
-  * {
+  > div > * {
     color: $text-opposite-second-color;
+    letter-spacing: 1px;
   }
 }
 #my-face {
@@ -91,17 +92,6 @@ main {
   section:not(:first-of-type) h2 {
     margin-top: $main-margin * 2;
   }
-}
-
-/* Main */
-
-.period {
-  color: grey;
-  font-weight: lighter;
-}
-
-.tools {
-  color: grey;
 }
 
 /* Technos */
