@@ -18,6 +18,9 @@ body {
 .row {
   display: flex;
   flex-direction: row;
+  .text-icon + .text-icon {
+    margin-left: $main-padding;
+  }
 }
 span.row {
   justify-content: start;
@@ -62,9 +65,6 @@ section p {
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  + .text-icon {
-    margin-left: $main-padding;
-  }
   > span, > a {
     margin: 0 5px;
     line-height: 24px;

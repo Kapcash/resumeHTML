@@ -36,6 +36,7 @@ body {
 p {
   margin: $main-margin 0;
 }
+
 ul {
   padding: 0;
   list-style: none;
@@ -43,6 +44,7 @@ ul {
     margin: $main-margin 0;
   }
 }
+
 a {
   text-decoration: none;
   text-decoration-color: $link-color;
@@ -81,6 +83,7 @@ header {
     letter-spacing: 1px;
   }
 }
+
 #my-face {
   height: 100%;
   width: auto;
@@ -88,9 +91,28 @@ header {
   filter: drop-shadow(0px 0px 1px black);
 }
 
+@mixin focus($thickness: 1px) {
+  border: $thickness dashed $primary-color;
+  background: adjust-color($primary-color, $alpha: -0.9);
+}
+
 main {
-  section:not(:first-of-type) h2 {
-    margin-top: $main-margin * 2;
+  section {
+    section {
+      $border-width: 1px;
+      // Transparent border so that on focus, text don't shift
+      border: $border-width solid transparent;
+      border-radius: 6px;
+      padding: $main-padding / 4 $main-padding / 2;
+      margin-right: -$main-padding / 2;
+      margin-left: -$main-padding / 2;
+      &:hover {
+        @include focus($border-width);
+      }
+    }
+    &:not(:first-of-type) h2 {
+      margin-top: $main-margin * 2;
+    }
   }
 }
 
@@ -102,21 +124,18 @@ main {
   padding-left: $main-padding;
   margin-right: -$main-padding;
   border-radius: 0 0 0 10px;
-}
-#technos > * {
-  margin-top: 15px;
-  margin-bottom: 0;
-  &:last-child {
-    margin-bottom: 15px;
+  > * {
+    margin-top: $main-margin;
+    margin-bottom: 0;
+    &:last-child {
+      margin-bottom: $main-margin;
+    }
   }
 }
 
 /* Languages */
 #languages li {
   font-weight: bold;
-  > span {
-    font-weight: lighter;
-  }
 }
 
 #links {
