@@ -193,7 +193,7 @@ body {
 }
 
 p {
-  margin: 0.5rem 0;
+  margin: 0.25rem 0;
 }
 
 ul {
@@ -252,7 +252,7 @@ header > div > * {
 main section section {
   border: 1px solid transparent;
   border-radius: 6px;
-  padding: 5px 10px;
+  padding: 3.3333333333px 10px;
   margin-right: -10px;
   margin-left: -10px;
 }
@@ -293,6 +293,13 @@ main section:not(:first-of-type) h2 {
   color: #141421;
   font-size: 32px;
   margin: 0 0.25rem;
+}
+
+#referees i {
+  color: #666666;
+}
+#referees i:hover {
+  color: black;
 }
 
 /*# sourceMappingURL=test.css.map */

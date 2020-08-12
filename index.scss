@@ -34,7 +34,7 @@ body {
 }
 
 p {
-  margin: $main-margin 0;
+  margin: $main-margin / 2 0;
 }
 
 ul {
@@ -103,7 +103,7 @@ main {
       // Transparent border so that on focus, text don't shift
       border: $border-width solid transparent;
       border-radius: 6px;
-      padding: $main-padding / 4 $main-padding / 2;
+      padding: $main-padding / 6 $main-padding / 2;
       margin-right: -$main-padding / 2;
       margin-left: -$main-padding / 2;
       &:hover {
@@ -147,5 +147,12 @@ main {
       font-size: $font-size * 2;
       margin: 0 $main-margin / 2;
     }
+  }
+}
+
+#referees i {
+  color: $text-second-color;
+  &:hover {
+    color: $text-primary-color
   }
 }
