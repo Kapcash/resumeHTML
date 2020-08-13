@@ -234,12 +234,12 @@ header {
 header.line {
   margin: 5px 0;
 }
-header h1 {
-  color: white;
-}
 header > div > * {
   color: #cccccc;
   letter-spacing: 1px;
+}
+header h1 {
+  color: white;
 }
 
 #my-face {

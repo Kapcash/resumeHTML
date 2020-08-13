@@ -75,12 +75,12 @@ header {
   &.line {
     margin: 5px 0;
   }
-  h1 {
-    color: $text-opposite-color;
-  }
   > div > * {
     color: $text-opposite-second-color;
     letter-spacing: 1px;
+  }
+  h1 {
+    color: $text-opposite-color;
   }
 }
 
