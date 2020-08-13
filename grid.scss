@@ -1,9 +1,11 @@
 @import 'variables';
 
 body {
+  $right-col-width: 30%;
+  $header-row-height: 13%;
   display: grid;
-  grid-template-columns: auto 30%;
-  grid-template-rows: 13% auto;
+  grid-template-columns: 100% - $right-col-width $right-col-width;
+  grid-template-rows: $header-row-height 100% - $header-row-height;
 }
 
 .line {
