@@ -40,6 +40,7 @@ p {
 ul {
   padding: 0;
   list-style: none;
+  margin: 0;
   li {
     margin: $main-margin 0;
   }
@@ -154,5 +155,23 @@ main {
   color: $text-second-color;
   &:hover {
     color: $text-primary-color
+  }
+}
+
+.tag {
+  border-radius: 5px;
+  background-color: rgb(119, 255, 119);
+  padding: 2px $main-padding / 2;
+  margin: 0 5px;
+  font-size: small;
+
+  display: flex;
+  align-items: center;
+
+  &.front {
+    background-color: $second-color;
+  }
+  &.back {
+    background-color: rgb(255, 172, 172);
   }
 }

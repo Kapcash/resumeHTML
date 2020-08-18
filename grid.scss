@@ -8,11 +8,6 @@ body {
   grid-template-rows: $header-row-height 100% - $header-row-height;
 }
 
-.line {
-  display: flex;
-  flex-direction: row;
-}
-
 .column {
   display: flex;
   flex-direction: column;
