@@ -3,27 +3,27 @@ Author: **Florent Catiau-Tristant**
 ## This is the source files of my personal resume!
 
 > All the textual content writen in the HTML files are personal and must not be used in any other context.  
-Nonetheless, you are free to inspire your work from this repository as long as you don't keep the textual content for your personal usage.
+Nonetheless, you are free to inspire yourself from this repository as long as you don't keep the textual content for your personal usage.
 
-# Open the page
+# See the resume
 
 Just open the `index.html` on any browser.
 
-## Compile stylesheet:
+## Developping:
 
-Install the `sass` cli tool:
-
-```bash
-npm install -g sass
-```
-
-Then use
+While developing:
 
 ```bash
-sass --watch ./index.scss dist/index.css
+yarn install
+
+yarn dev
 ```
 
-And all the `.scss` are merged and compiled into a single `.css` file.
+Build once:
+
+```bash
+yarn build
+```
 
 ## Get the .pdf
 

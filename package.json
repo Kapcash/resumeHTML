@@ -1,0 +1,28 @@
+{
+  "name": "resume-html",
+  "version": "1.0.0",
+  "description": "Florent Catiau-Tristant resume",
+  "main": "index.html",
+  "private": true,
+  "scripts": {
+    "dev": "sass --watch scss/index.scss dist/index.css",
+    "build": "sass scss/index.scss dist/index.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kapcash/resumeHTML.git"
+  },
+  "keywords": [
+    "resume",
+    "html"
+  ],
+  "author": "Florent Catiau-Tristant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kapcash/resumeHTML/issues"
+  },
+  "homepage": "https://github.com/Kapcash/resumeHTML#readme",
+  "devDependencies": {
+    "sass": "^1.35.1"
+  }
+}
