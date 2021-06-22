@@ -1,6 +1,8 @@
 resume-html.pdf
 index.html
 
+.env
+
 dist/
 css/
 node_modules/

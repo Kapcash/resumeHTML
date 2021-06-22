@@ -15,17 +15,17 @@
       <div class="row">
         <div class="text-icon">
           <i class="fas fa-phone"></i>
-          <span>+33 6 45 34 71 15</span>
+          <span><%= data.phoneNumber %></span>
         </div>
         <div class="text-icon">
           <i class="fa fa-envelope"></i>
-          <a href="mailto:florent.ct@orange.fr">florent.ct@orange.fr</a>
+          <a href="mailto:<%= data.email %>"><%= data.email %></a>
         </div>
       </div>
       <div class="row">
         <div class="text-icon">
           <i class="fas fa-home"></i>
-          <span>8, Passatge de Tona, 08023, Barcelona</span>
+          <span><%= data.address %></span>
         </div>
       </div>
       <% } %>
@@ -130,10 +130,6 @@
         <img src="imgs/spring.png" width="40"/>
         <span>J2E Spring</span>
       </div>
-      <!-- <div class="text-icon big">
-        <img src="imgs/react.png" width="40"/>
-        <span>Reactjs</span>
-      </div> -->
       <div class="text-icon big">
         <img src="imgs/mongodb.png" width="40"/>
         <span>MongoDB</span>

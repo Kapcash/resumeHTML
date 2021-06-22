@@ -7,29 +7,45 @@ Nonetheless, you are free to inspire yourself from this repository as long as yo
 
 # See the resume
 
-Just open the `index.html` on any browser.
+1. Set env variables
 
-## Developping:
+```bash
+# .env
+PHONE="+33 6 00 00 00 00"
+EMAIL=thisisnotmyemail@bots.js
+ADDRESS="Highway to hell"
+```
 
-While developing:
+This values will be injected into the final html
+
+2. Build the final bundle
 
 ```bash
 yarn install
 
-yarn dev
+yarn build
 ```
 
-## Final build
+3. Open the `index.html` on any browser.
+
+> Note: The folders imgs/ and css/ must be at the same level as `index.html` in order to be loaded correctly.
+
+## Obfuscated data
 
 By default, the final html is obfuscated.
 That means every private data is removed, to avoid them being crawled by bots on internet.
 
-Build once:
-
 ```bash
-yarn build
 # without obfuscation
 yarn build:private
+```
+
+## Developping:
+
+While developping, scss files can be automatically compiled on save using:
+
+```bash
+yarn dev
 ```
 
 ## Get the .pdf

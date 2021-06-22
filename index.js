@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const fs = require('fs')
 const path = require('path')
 const yargs = require('yargs/yargs')
@@ -25,6 +27,13 @@ const { private, } = argv;
 const resumeHTMLString = fs.readFileSync(path.resolve(__dirname, FILE_INPUT), 'utf8')
 
 const compiled = _template(resumeHTMLString)
-const compiledResumeHTMLString = compiled({ private })
+const compiledResumeHTMLString = compiled({
+  private,
+  data: {
+    phoneNumber: process.env.PHONE || '+33 6 00 00 00 00',
+    email: process.env.EMAIL || 'thisisnotmyemail@bots.js',
+    address: process.env.ADDRESS || 'Highway to hell'
+  }
+})
 
 fs.writeFileSync(path.resolve(__dirname, FILE_OUTPUT), compiledResumeHTMLString)
