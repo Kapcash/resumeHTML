@@ -2,14 +2,16 @@
 <html>
 
 <head>
-  <link rel="stylesheet" type="text/css" href="./dist/index.css"></head>
+  <link rel="stylesheet" type="text/css" href="./css/index.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/85707b2e38.js" crossorigin="anonymous" async></script>
+</head>
 <body>
   <header class="row">
     <div>
       <h1>Florent Catiau-Tristant</h1>
       <h2>Web Developer - Full Stack Javascript</h2>
+      <% if (private) { %>
       <div class="row">
         <div class="text-icon">
           <i class="fas fa-phone"></i>
@@ -26,6 +28,7 @@
           <span>8, Passatge de Tona, 08023, Barcelona</span>
         </div>
       </div>
+      <% } %>
     </div>
     <img id="my-face" src="./imgs/me.webp" width="100" height="100">
   </header>

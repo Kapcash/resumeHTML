@@ -19,10 +19,17 @@ yarn install
 yarn dev
 ```
 
+## Final build
+
+By default, the final html is obfuscated.
+That means every private data is removed, to avoid them being crawled by bots on internet.
+
 Build once:
 
 ```bash
 yarn build
+# without obfuscation
+yarn build:private
 ```
 
 ## Get the .pdf
