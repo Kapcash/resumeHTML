@@ -1,9 +1,9 @@
 $font-stack: 'Roboto', sans-serif;
 $font-size: 16px;
 
-$main-padding: 20px;
-$half-main-padding: math.div($main-padding, 2);
-$main-margin: 0.5rem;
+$pad: 20px;
+$pad-half: math.div($pad, 2);
+$marg: 0.5rem;
 
 $primary-color: #dc254e;
 $second-color: #bbf5ce;
@@ -20,7 +20,6 @@ $text-primary-color: black;
 $text-second-color: lighten($text-primary-color, $text-contrast);
 $text-opposite-color: white;
 $text-opposite-second-color: darken($text-opposite-color, math.div($text-contrast, 2));
-
 
 .red {
   color: $primary-color;
