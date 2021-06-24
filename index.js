@@ -11,18 +11,18 @@ const argv = yargs(hideBin(process.argv))
     alias: 'p',
     type: 'boolean',
     default: false,
-    description: 'Disable private data obfuscation in the final builld',
+    description: 'Disable private data obfuscation in the final builld'
   })
   .example([
     ['$0', 'Build the obfuscated resume'],
-    ['$0 -p', 'Build the entire resume for private usage'],
+    ['$0 -p', 'Build the entire resume for private usage']
   ])
-  .argv;
+  .argv
 
 const FILE_INPUT = 'index.template.html'
 const FILE_OUTPUT = 'index.html'
 
-const { private, } = argv;
+const { private } = argv
 
 const resumeHTMLString = fs.readFileSync(path.resolve(__dirname, FILE_INPUT), 'utf8')
 
