@@ -5,8 +5,12 @@ body {
   $header-row-height: 13%;
   display: grid;
   grid-template-columns: 100% - $right-col-width $right-col-width;
-  grid-template-rows: $header-row-height 100% - $header-row-height;
+  @media only screen and (max-width: $mobile-width) {
+    display: flex;
+    flex-direction: column;
+  }
 }
+
 
 .column {
   display: flex;
@@ -15,6 +19,7 @@ body {
 .row {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   .text-icon + .text-icon {
     margin-left: $pad;
   }
@@ -44,9 +49,21 @@ aside {
   padding-right: $pad;
   section {
     margin-bottom: $pad;
+    @media print {
+      margin-bottom: 0;
+    }
+  }
+  @media only screen and (max-width: $mobile-width) {
+    padding-left: $pad;
+    section {
+      margin-bottom: $pad-half;
+    }
   }
   .full-width {
     margin-right: -$pad;
+    @media only screen and (max-width: $mobile-width) {
+      margin-left: -$pad;
+    }
   }
 }
 

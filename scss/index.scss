@@ -4,20 +4,14 @@
 @import 'titles';
 @import 'grid';
 
+// TODO Fix print margin so that it fits
+
 * {
   box-sizing: border-box;
 }
 
 $a4-width: 21cm;
 $a4-height: 29.7cm;
-
-@media print {
-  body {
-    width: $a4-width;
-    height: $a4-height;
-    margin: 0;
-  }
-}
 
 html {
   background-color: #3f3f3f;
@@ -27,12 +21,19 @@ html {
 
 body {
   background-color: $lightest-color;
-  width: $a4-width;
-  height: $a4-height;
-  margin: 0;
-  overflow: scroll;
+  max-width: $a4-width + 5cm;
+  margin: auto;
 
   color: $text-primary-color;
+  @media (min-width: $a4-width) {
+    aspect-ratio: 1 / 1.41;
+    overflow: auto;
+  }
+  @media print {
+    width: $a4-width;
+    height: $a4-height;
+    margin: 0;
+  }
 }
 
 p {
@@ -72,9 +73,15 @@ a {
 
 /* Header */
 header {
-  padding: 0 $pad;
+  position: relative;
+  flex-basis: 0;
+  padding: $pad;
   background-color: #09071d;
   justify-content: space-between;
+  @media (min-width: $mobile-width) {
+    padding: 0 $pad;
+    min-height: 150px;
+  }
   &.line {
     margin: 5px 0;
   }
@@ -88,10 +95,19 @@ header {
 }
 
 #my-face {
+  position: absolute;
+  right: 0;
+  margin-right: 30px;
   height: 100%;
   width: auto;
-  transform: translateY(28px);
+  transform: translateY(20%);
   filter: drop-shadow(0px 0px 1px black);
+  @media only screen and (max-width: $mobile-width) {
+    display: none;
+  }
+  @media print {
+    transform: none;
+  }
 }
 
 @mixin focus($thickness: 1px) {
@@ -109,6 +125,10 @@ main {
       padding: math.div($pad, 6) $pad-half;
       margin-right: -$pad-half;
       margin-left: -$pad-half;
+      @media print {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
       &:hover {
         @include focus($border-width);
       }
@@ -124,9 +144,18 @@ main {
 #technos {
   background-color: $second-color;
   padding-top: $pad;
+  padding-bottom: $pad;
   padding-left: $pad;
   margin-right: -$pad;
-  border-radius: 0 0 0 10px;
+  @media print {
+    padding-top: $pad-half;
+    padding-bottom: $pad-half;
+    border-radius: 0 0 0 10px;
+  }
+  @media (min-width: $mobile-width) {
+    padding-bottom: 0;
+    border-radius: 0 0 0 10px;
+  }
   > * {
     margin-top: $marg;
     margin-bottom: 0;

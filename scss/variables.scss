@@ -1,7 +1,9 @@
 $font-stack: 'Roboto', sans-serif;
 $font-size: 16px;
 
-$pad: 20px;
+$mobile-width: 720px;
+
+$pad: 2rem;
 $pad-half: math.div($pad, 2);
 $marg: 0.5rem;
 

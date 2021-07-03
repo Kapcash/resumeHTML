@@ -1,5 +1,11 @@
 @import 'variables';
 
+@media print {
+  h1, h2, h3, h4, h5 {
+    margin: math.div($marg, 2) 0;
+  }
+}
+
 h1, h2, h3, h4, h5 {
   margin: $marg 0;
   a {
