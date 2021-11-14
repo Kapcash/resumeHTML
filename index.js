@@ -30,9 +30,9 @@ const compiled = _template(resumeHTMLString)
 const compiledResumeHTMLString = compiled({
   private,
   data: {
-    phoneNumber: process.env.PHONE || '+33 6 00 00 00 00',
-    email: process.env.EMAIL || 'thisisnotmyemail@bots.js',
-    address: process.env.ADDRESS || 'Highway to hell'
+    phoneNumber: process.env.PHONE || '+33 6 ** ** ** **',
+    email: process.env.EMAIL || 'f*********@******.fr',
+    address: process.env.ADDRESS || 'Highway to hell 0, Barcelona, Spain'
   }
 })
 
