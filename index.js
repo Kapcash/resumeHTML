@@ -11,11 +11,11 @@ const argv = yargs(hideBin(process.argv))
     alias: 'p',
     type: 'boolean',
     default: false,
-    description: 'Disable private data obfuscation in the final builld'
+    description: 'Disable private data obfuscation in the final build',
   })
   .example([
     ['$0', 'Build the obfuscated resume'],
-    ['$0 -p', 'Build the entire resume for private usage']
+    ['$0 -p', 'Build the entire resume for private usage'],
   ])
   .argv
 
@@ -32,8 +32,8 @@ const compiledResumeHTMLString = compiled({
   data: {
     phoneNumber: process.env.PHONE || '+33 6 ** ** ** **',
     email: process.env.EMAIL || 'f*********@******.fr',
-    address: process.env.ADDRESS || 'Highway to hell 0, Barcelona, Spain'
-  }
+    address: process.env.ADDRESS || 'Highway to hell 0, Barcelona, Spain',
+  },
 })
 
 fs.writeFileSync(path.resolve(__dirname, FILE_OUTPUT), compiledResumeHTMLString)
