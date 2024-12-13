@@ -5,7 +5,7 @@
   "main": "index.html",
   "private": true,
   "scripts": {
-    "dev": "node index.js && yarn sass --watch scss/index.scss css/index.css",
+    "dev": "node --watch index.js && yarn sass --watch scss/index.scss css/index.css",
     "build": "node index.js && yarn sass scss/index.scss css/index.css",
     "build:private": "node index.js --private && yarn sass scss/index.scss css/index.css"
   },

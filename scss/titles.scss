@@ -19,6 +19,9 @@ h1 {
   text-transform: uppercase;
   font-weight: bold;
 }
+h2 {
+  margin-bottom: $marg * 2;
+}
 h1, h2, h3 {
   color: $text-primary-color;
   border-color: $text-primary-color;

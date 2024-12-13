@@ -16,6 +16,7 @@ $a4-height: 29.7cm;
 html {
   background-color: #3f3f3f;
   font-family: $font-stack;
+  font-optical-sizing: auto;
   font-size: $font-size;
 }
 
@@ -163,6 +164,9 @@ main {
       margin-bottom: $marg;
     }
   }
+  > .subtitle {
+    margin: $marg * 2 0;
+  }
 }
 
 /* Languages */
@@ -179,11 +183,14 @@ main {
       font-size: $font-size * 2;
       margin: 0 math.div($marg, 2);
     }
-    &:hover {
-      color: rgb(0, 32, 175);
-    }
   }
 }
+
+  a {
+    &:hover {
+      color: rgb(21, 43, 137);
+    }
+  }
 
 #referees i {
   color: $text-second-color;

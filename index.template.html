@@ -4,15 +4,19 @@
 <head>
   <title>Florent's resume</title>
   <link rel="stylesheet" type="text/css" href="./css/index.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@100..700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/85707b2e38.js" crossorigin="anonymous" async></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
   <header class="row">
     <div>
       <h1>Florent Catiau-Tristant</h1>
       <h2>Web Developer - Full Stack Javascript</h2>
+
       <% if (!private) { %>
       <div class="row">
         <div class="text-icon">
@@ -24,6 +28,7 @@
           <a href="mailto:<%= data.email %>"><%= data.email %></a>
         </div>
       </div>
+
       <div class="row">
         <div class="text-icon">
           <i class="fas fa-home"></i>
@@ -31,37 +36,58 @@
         </div>
       </div>
       <% } %>
+
     </div>
     <img id="my-face" src="./imgs/me.webp" width="100" height="100">
   </header>
   <main>
+
     <!-- Experience -->
+    
     <section>
       <h2 class="underline red">Experience</h2>
+
       <section>
-        <h3>VeryChic<span> - Frontend Engineer</span></h3>
-        <span class="grey lighter">Full-time contract - Decembre 2020 - Today</span>
-        <p>Migrate the AngularJS website to NuxtJS. Optimizing performance, dealing with API
-          Developping a NodeJS API foundations with NestJS and Lambdas</p>
+        <h3>VeryChic<span> - Full stack Tech Lead</span></h3>
+        <span class="grey lighter">September 2023 - Today</span>
+        <p>Mentoring & training the team. Maintain the entire platform and update the tech stack. <br>
+          Handle PoC, documentation, code reviews, and architecture decisions. Helping to improve the team's productivity and delivery Scrum strategies. <br>
+          Leading the full migration from Nuxt 2 to Nuxt 3, mitigating business and time restriction, and refactors. <br>
+        </p>
+        <span class="grey lighter">Technology used: Nuxt / Node Typescript / Cypress / AWS / Java</span>
+      </section>
+
+      <section>
+        <h3>VeryChic<span> - Full stack Engineer</span></h3>
+        <span class="grey lighter">Decembre 2020 - August 2023</span>
+        <p>Migrate the AngularJS website to Nuxt 2. Optimizing the website performance.
+          Create an AWS lambdas monorepo for new batch processes and endpoints.
+          
+        </p>
         <span class="grey lighter">Technology used: Nuxt.js / Jest / Cypress / AWS / Cloudflare</span>
       </section>
+
       <section>
-        <h3>Veepee<span> - Fullstack Engineer + Frontend Tech Lead</span></h3>
-        <span class="grey lighter">Full-time contract - November 2019 - Decembre 2020</span>
+        <h3>Veepee<span> - Full stack Engineer + Frontend Tech Lead</span></h3>
+        <span class="grey lighter">November 2019 - Decembre 2020</span>
         <p>Working on an internal project about commercial supplier standardisation.
           Setup Typescript, Jest unit testing, teaching javascript best practises, writing documentation.</p>
         <span class="grey lighter">Technology used: Nuxt.js / Jest / Ruby on rails / Sidekiq / Docker</span>
       </section>
+
       <section>
-        <h3>ASI<span> - Fullstack Engineer</span></h3>
+        <h3>ASI<span> - Full stack Engineer</span></h3>
         <span class="grey lighter">Internship then Full-time contract - June 2018 - October 2019</span>
         <p>Back-end dev in a big team for <i>Max</i>, a French neo-bank. Working with more than 15 micro-services, using RESTful API, real-time events, and caching. The app is public so I dealt with critic production issues with 100k users.</p>
         <span class="grey lighter">Technology used: Angular / NodeJS / Java Sprint Boot / Kibana / Apigee / Docker / MongoDB / Elastic Search</span>
       </section>
     </section>
+
     <!-- Projects -->
+
     <section>
-      <h2 class="underline red">Projects</h2>
+      <h2 class="underline red">Projects (Open source)</h2>
+
       <section>
         <div class="row">
           <h3><a href="https://addons.mozilla.org/fr/firefox/addon/bookmark-switcher/" target="_blank">Bookmark Switcher</a></h3>
@@ -71,37 +97,28 @@
         </div>
         <p>
           A browser extension (Firefox, Chrome) to switch between several bookmark bars.
-          Provides a litle popup UI to create new bars and select others.
+          Provides a little popup UI to create new bars and select others.
         </p>
       </section>
+
       <section>
         <div class="row">
-          <h3><a href="https://github.com/Kapcash/vue-class-transformer" target="_blank">Vue class transformer</a></h3>
+          <h3><a href="https://github.com/Kapcash/vue-use-calendar" target="_blank">vue-use-calendar</a></h3>
           <ul class="row">
-            <li class="tag back">Nodejs</li>
+            <li class="tag front">Vue 3</li>
           </ul>
         </div>
         <p>
-          A Node CLI to convert vanilla syntax Vue component to Typescript class based syntax.
-          Built with the Typescript AST library.
-        </p>
-      </section>
-      <section>
-        <div class="row">
-          <h3><a href="https://addons.mozilla.org/fr/firefox/addon/bookmark-switcher/" target="_blank">vue-spin-wheel</a></h3>
-          <ul class="row">
-            <li class="tag front">Vue 2</li>
-          </ul>
-        </div>
-        <p>
-          A little Vue.js component library written in Typescript.
-          Provide a wheel that spin by mouse dragging. I learnt to build thrid party components and optimize javascript statements.
+          A Vue 3 composable library to generate headless calendars. It handles the dates generation, the calendar state and the events management.
         </p>
       </section>
     </section>
+
     <!-- Education -->
+     
     <section>
       <h2 class="underline red">Education</h2>
+
       <section>
         <span class="row">
           <h3>Graduate Engineer School</h3>
@@ -112,6 +129,7 @@
           I was part of the school’s main association as a Communication Manager and a Treasurer.
         </p>
       </section>
+
       <section>
         <span class="row">
           <h3>2-years Technical Degree in IT</h3>
@@ -122,52 +140,78 @@
       </section>
     </section>
   </main>
+
   <!-- Sidebar -->
+  
   <aside class="column">
+
     <!-- Technologies -->
+
     <section id="technos" class="full-width">
       <div class="text-icon big">
         <img src="imgs/vuesjs.png" width="40"/>
         <span>Vue.js (Nuxt.js)</span>
       </div>
+
       <div class="text-icon big">
-        <img src="imgs/nestjs_logo.png" width="40"/>
-        <span>Nodejs (NestJS)</span>
+        <img src="imgs/nodejs.png" width="40"/>
+        <span>Nodejs</span>
       </div>
-      <div class="text-icon big">
-        <img src="imgs/jest.png" width="40"/>
-        <span>Jest</span>
-      </div>
-      <div class="text-icon big">
-        <img src="imgs/rails.png" width="40"/>
-        <span>Ruby on rails</span>
-      </div>
+
       <div class="text-icon big">
         <img src="imgs/git_logo.png" width="40"/>
         <span>Git</span>
       </div>
+
+      <div class="text-icon big">
+        <img src="imgs/aws.png" width="40"/>
+        <span>AWS</span>
+      </div>
+
       <div class="text-icon big">
         <img src="imgs/spring.png" width="40"/>
-        <span>J2E Spring</span>
+        <span>Java Spring Boot</span>
       </div>
+
+      <div class="text-icon big">
+        <img src="imgs/postgresql.png" width="40"/>
+        <span>SQL</span>
+      </div>
+
+      <p class="subtitle"><i>I also have experiences with</i></p>
+
+      <div class="text-icon big">
+        <img src="imgs/docker.png" width="40"/>
+        <span>Docker</span>
+      </div>
+      
       <div class="text-icon big">
         <img src="imgs/mongodb.png" width="40"/>
         <span>MongoDB</span>
       </div>
+      
       <div class="text-icon big">
-        <img src="imgs/postgresql.png" width="40"/>
-        <span>PostgreSQL</span>
+        <img src="imgs/elastic-search.png" width="40"/>
+        <span>Open Search</span>
+      </div>
+
+      <div class="text-icon big">
+        <img src="imgs/rails.png" width="40"/>
+        <span>Ruby on rails</span>
       </div>
     </section>
+    
     <!-- Languages -->
+    
     <section id="languages">
       <h2 class="underline">Languages</h2>
       <ul>
         <li>French <span class="grey lighter">(Native)</span></li>
+        <li>Spanish <span class="grey lighter">(Professional level)</span></li>
         <li>English <span class="grey lighter">(Professional level)</span></li>
-        <li>Spanish <span class="grey lighter">(Casual level)</span></li>
       </ul>
     </section>
+    
     <section id="links" class="column">
       <h2 class="underline">Networking</h2>
       <a href="https://linkedin.com/in/florent-catiau-tristant" target="_blank" class="no-icon">
@@ -178,14 +222,19 @@
         <i class="fab fa-github"></i>
         <span>You can explore my <i>wip</i> side-projects here. I'll finish some of them one day!</span>
       </a>
-      <a href="https://twitter.com/kapcash" target="_blank" class="no-icon">
+      <!-- <a href="https://twitter.com/kapcash" target="_blank" class="no-icon">
         <i class="fab fa-twitter"></i>
         <span>Sharing about frontend experiences, javascript tips, and my journey as a developer!</span>
-      </a>
+      </a> -->
     </section>
+    
     <section id="referees">
       <h2 class="underline">Referees</h2>
       <ul>
+        <li>
+          <span>Sergio Vico, CTO at VeryChic</span>
+          <a href="mailto:sergio.vico@verychic.com"><i class="fa fa-envelope"></i></a>
+        </li>
         <li>
           <span>Xavier ROBERT, technical expert at ASI, now architect at Orange</span>
           <a href="mailto:xavier.robert972@gmail.com"><i class="fa fa-envelope"></i></a>
@@ -194,6 +243,7 @@
       </ul>
     </section>
   </aside>
+
   <footer></footer>
 </body>
 
