@@ -80,8 +80,8 @@ header {
   background-color: #09071d;
   justify-content: space-between;
   @media (min-width: $mobile-width) {
-    padding: 0 $pad;
-    min-height: 150px;
+    padding: 4px $pad;
+    // min-height: 150px;
   }
   &.line {
     margin: 5px 0;
@@ -107,7 +107,7 @@ header {
     display: none;
   }
   @media print {
-    transform: none;
+    transform: translateY(17%);
   }
 }
 
