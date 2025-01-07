@@ -136,6 +136,9 @@ main {
     }
     &:not(:first-of-type) h2 {
       margin-top: $marg * 2;
+      @media print {
+        margin-top: $marg;
+      }
     }
   }
 }
@@ -151,6 +154,7 @@ main {
   @media print {
     padding-top: $pad-half;
     padding-bottom: $pad-half;
+    padding-left: $pad-half;
     border-radius: 0 0 0 10px;
   }
   @media (min-width: $mobile-width) {
@@ -166,6 +170,10 @@ main {
   }
   > .subtitle {
     margin: $marg * 2 0;
+    font-size: 0.85em;
+    @media print {
+      margin: $marg 0;
+    }
   }
 }
 

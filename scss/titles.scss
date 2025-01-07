@@ -21,6 +21,9 @@ h1 {
 }
 h2 {
   margin-bottom: $marg * 2;
+  @media print {
+    margin-bottom: $marg;
+  }
 }
 h1, h2, h3 {
   color: $text-primary-color;

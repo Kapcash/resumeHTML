@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import 'variables';
 
 body {
@@ -59,6 +60,9 @@ aside {
       margin-bottom: $pad-half;
     }
   }
+  @media print {
+    padding-left: math.div($pad, 2);
+  }
   .full-width {
     margin-right: -$pad;
     @media only screen and (max-width: $mobile-width) {
@@ -98,6 +102,9 @@ main section p {
     font-size: large;
     > img {
       margin-right: $pad;
+      @media print {
+        margin-right: math.div($pad, 2);
+      }
     }
   }
 }
